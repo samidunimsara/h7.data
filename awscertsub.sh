@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API_KEY="pUI72s8WEv4dpIVPLQQHWa4uPD0Qgz5E2TWIzQMH"
+API_KEY="apikey"
 API_URL="https://tls.bufferover.run/dns?q=."
 
 read -p "Enter domain name or list of domains (separated by spaces): " input_domains
