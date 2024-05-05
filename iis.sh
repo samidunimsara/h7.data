@@ -1,6 +1,7 @@
 #! bash
 
 # IISRecon
+#0xRTH/IISRecon
 # Recon script to bruteforce IIS shortname to full name and find parameter
 
 tmp="./.tmp"
