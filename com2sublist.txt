@@ -1,0 +1,32 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: $0 <file1> <file2>"
+    exit 1
+fi
+
+file1="$1"
+file2="$2"
+
+# Ensure both files are sorted and unique
+sort -u "$file1" -o "$file1"
+sort -u "$file2" -o "$file2"
+
+# Find domains unique to file1
+unique_in_file1=$(comm -23 "$file1" "$file2")
+
+# Find domains unique to file2
+unique_in_file2=$(comm -13 "$file1" "$file2")
+
+# Display results
+if [ -n "$unique_in_file1" ]; then
+    echo "Domains in $file1 but not in $file2:"
+    echo "$unique_in_file1"
+    echo "------------------------"
+fi
+
+if [ -n "$unique_in_file2" ]; then
+    echo "Domains in $file2 but not in $file1:"
+    echo "$unique_in_file2"
+    echo "------------------------"
+fi
