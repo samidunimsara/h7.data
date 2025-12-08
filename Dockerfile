@@ -120,3 +120,10 @@ RUN  curl -o /function/resolvers.txt -LO https://raw.githubusercontent.com/janma
 
 ENTRYPOINT [ "/usr/local/bin/python", "-m", "awslambdaric" ]
 CMD [ "handler.entry_point.lambda_handler" ]
+
+https://gemini.google.com/share/ed6bf0317f48
+
+https://learnenglish.britishcouncil.org/
+https://learnenglish.britishcouncil.org/
+www.bbc.co.uk
+cambridge.org
